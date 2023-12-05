@@ -36,7 +36,7 @@ body {
   color: #fff;
 }
 
-.add-form button {
+.add-form .add-btn {
   background-color: #917703;
   color: #fff;
   font-weight: bold;
@@ -47,7 +47,7 @@ body {
   cursor: pointer;
 }
 
-.add-form button:hover {
+.add-form .add-btn:hover {
   opacity: 1;
 }
 

@@ -12,14 +12,14 @@ const App = () => (
         ))}
       </select>
       <input placeholder="Manda aqui" autoFocus />
-      <button>Adicionar</button>
+      <button className="add-btn">Adicionar</button>
     </form>
 
     <div className="list">
       <ul>
         <li>
           <input type="checkbox" />
-          <span>6 halteres 10kg</span>
+          <p>6 halteres 10kg</p>
           <button>❌</button>
         </li>
       </ul>
@@ -28,3 +28,4 @@ const App = () => (
 )
 
 export { App }
+
