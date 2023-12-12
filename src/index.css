@@ -53,19 +53,17 @@ body {
 
 .list {
   background-color: #e6e1b1;
-  padding: 3rem;
+  padding: 2.5rem;
 }
 
 .list ul {
   display: flex;
+  gap: 1.5rem;
 }
 
 .list li {
   display: flex;
-  gap: 1rem;
-}
-
-.list li {
+  gap: .5rem;
   list-style: none;
 }
 
