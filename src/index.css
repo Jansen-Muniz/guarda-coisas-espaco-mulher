@@ -61,16 +61,21 @@ body {
 .list {
   background-color: #e6e1b1;
   padding: 2.5rem;
+  height: 100vh;
 }
 
 .list ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
+  justify-content: center;
+  align-content: start;
   gap: 1.5rem;
 }
 
 .list li {
   display: flex;
-  gap: .5rem;
+  align-items: center;
+  gap: 1.2rem;
   list-style: none;
 }
 
