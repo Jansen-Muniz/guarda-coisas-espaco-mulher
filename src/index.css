@@ -18,7 +18,13 @@ body {
 }
 
 .add-form h3 {
-  font-size: .8rem;
+  font-size: 1.5rem;
+}
+
+.add-form select,
+.add-form input,
+.add-form .add-btn {
+  font-size: 1rem;
 }
 
 .add-form select,
@@ -27,8 +33,10 @@ body {
   border: none;
   border-radius: .5rem;
   padding: .7rem;
+  outline: none;
 }
 
+.add-form .add-btn,
 .add-form input::placeholder,
 .add-form h3,
 .add-form select,
@@ -38,7 +46,6 @@ body {
 
 .add-form .add-btn {
   background-color: #917703;
-  color: #fff;
   font-weight: bold;
   border: none;
   padding: .7rem;
@@ -67,8 +74,16 @@ body {
   list-style: none;
 }
 
+.list ul span {
+  font-size: 1.3rem;
+}
+
 .list button {
   border: none;
   background-color: #e6e1b1;
   cursor: pointer;
+}
+
+.line-through {
+  text-decoration: line-through;
 }

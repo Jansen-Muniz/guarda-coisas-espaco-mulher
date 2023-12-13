@@ -14,7 +14,7 @@ const App = () => {
       ...prev,
       {
         id: crypto.randomUUID(),
-        quantity: selectQtd.value,
+        quantity: +selectQtd.value,
         name: inputAdd.value,
         stored: false
       }
@@ -24,10 +24,16 @@ const App = () => {
   const handleClickDelete = (id) =>
     setItems(prev => prev.filter(item => item.id !== id))
 
+
+  const handleClickCheck = (id) =>
+    setItems(prev => prev.map(item =>
+      item.id === id ? { ...item, stored: !item.stored } : item
+    ))
+
   return (
     <>
       <form className="add-form" onSubmit={handleSubmit}>
-        <h3>O que deseja guardar?</h3>
+        <h3>O que precisa guardar?</h3>
         <select name="selectQtd">
           {ids.map((id, index) => (
             <option key={id} value={index + 1}>
@@ -41,10 +47,16 @@ const App = () => {
 
       <div className="list">
         <ul>
-          {items.map((item) => (
+          {items.map(item => (
             <li key={item.id}>
-              <input type="checkbox" />
-              <span>{item.quantity} {item.name}</span>
+              <input
+                type="checkbox"
+                checked={item.stored}
+                onChange={() => handleClickCheck(item.id)}
+              />
+              <span className={item.stored ? 'line-through' : ''}>
+                {item.quantity} {item.name}
+              </span>
               <button onClick={() => handleClickDelete(item.id)}>❌</button>
             </li>
           ))}
