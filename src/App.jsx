@@ -7,7 +7,6 @@ const App = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-
     const { selectQtd, inputAdd } = e.target.elements
 
     setItems(prev => [
@@ -24,7 +23,6 @@ const App = () => {
   const handleClickDelete = (id) =>
     setItems(prev => prev.filter(item => item.id !== id))
 
-
   const handleClickCheck = (id) =>
     setItems(prev => prev.map(item =>
       item.id === id ? { ...item, stored: !item.stored } : item
@@ -33,7 +31,7 @@ const App = () => {
   return (
     <>
       <form className="add-form" onSubmit={handleSubmit}>
-        <h3>O que precisa guardar?</h3>
+        <h3>O que deseja guardar?</h3>
         <select name="selectQtd">
           {ids.map((id, index) => (
             <option key={id} value={index + 1}>
